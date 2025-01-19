@@ -2,26 +2,21 @@ import styled from "@emotion/styled"
 import { APPS_COLORS } from "../../enums"
 
 export const SearchForm = styled.form`
+  display: flex;
+  align-items: center;
   width: 710px;
   height: 48px;
-  top: 200px;
-  left: 605px;
   gap: 14px;
-  opacity: 0px;
 `
 export const SearchInput = styled.input`
   width: 550px;
   height: 48px;
   padding: 12px 12px 12px 20px;
   gap: 10px;
-  border-radius: 40px 0px 0px 0px;
-  border: 1px 0px 0px 0px;
-  opacity: 0px;
-
-  background: ${APPS_COLORS.SEARCH_INPUT_BACKGROUND};
+  border-radius: 40px;
   border: 1px solid ${APPS_COLORS.SEARCH_INPUT_BORDER};
-  backdrop-filter: blur(16px)
-
+  background: ${APPS_COLORS.SEARCH_INPUT_BACKGROUND};
+  backdrop-filter: blur(16px);
 `
 export const SearchButton = styled.button`
   width: 146px;
@@ -29,5 +24,17 @@ export const SearchButton = styled.button`
   padding: 12px 40px 12px 40px;
   gap: 10px;
   border-radius: 50px;
-  background: ${APPS_COLORS.SEARCH_BUTTON_BACKGROUND};
+  border: 1px solid transparent;
+  background: linear-gradient(0deg, #3678b4, #3678b4);
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24.2px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #ffffff;
+  cursor: pointer;
+  &:hover {
+    background-color: #4A319F;
+  }
 `
