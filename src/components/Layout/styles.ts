@@ -47,7 +47,7 @@ export const LogoName = styled.p`
   text-align: left;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
-  color: ${APPS_COLORS.HEADER_TEXT};
+  color: ${APPS_COLORS.TEXT_WHITE};
 `
 
 export const NavigationContainer = styled.nav`
@@ -68,7 +68,7 @@ export const Link = styled(NavLink)`
   text-align: left;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
-  color: ${APPS_COLORS.HEADER_TEXT};
+  color: ${APPS_COLORS.TEXT_WHITE};
   text-decoration: none;
 `
 
@@ -76,5 +76,6 @@ export const Main = styled.main`
   display: flex;
   flex-direction: column;
   flex: 1;
-  padding: 40px;
+  padding-top: 120px;
+  gap: 40px;
 `
