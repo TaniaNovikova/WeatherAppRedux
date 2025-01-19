@@ -1,7 +1,8 @@
 import styled from "@emotion/styled"
 import { NavLink, Link as SimpleLink } from "react-router-dom"
 
- import backgroundImage from "../../assets/pic 2.png"
+import backgroundImage from "../../assets/pic 2.png"
+import { APPS_COLORS } from "../../enums"
 
 export const LayoutWrapper = styled.div`
   display: flex;
@@ -12,30 +13,41 @@ export const LayoutWrapper = styled.div`
 `
 
 export const Header = styled.div`
-  display: flex;
   width: 100%;
-  min-height: 80px;
-  padding: 10px;
-  gap: 10px;
-  background-color: rgba(18, 45, 77, 0.5);
-  border-bottom: 1px solid rgba(210, 210, 210, 1);
+  height: 80px;
+  padding: 10px 85px;
+  border-bottom: 1px solid ${APPS_COLORS.HEADER_BORDER};
+
+  display: flex;
   justify-content: space-between;
-  padding-left: 85px;
-  padding-right: 85px;
   align-items: center;
+  gap: 10px;
+
+  background: ${APPS_COLORS.HEADER_BACKGROUND};
+  backdrop-filter: blur(10px); /*размытие заднего фона */
 `
 
 export const Logo = styled.div`
+  width: 155px;
+  height: 29px;
+  top: 25.5px;
+  left: 85px;
+  gap: 0px;
+  opacity: 0px;
+  /* 
   height: 100%;
-  width: fit-content;
+  width: fit-content; */
   cursor: pointer;
 `
 
 export const LogoName = styled.p`
-  color: white;
   font-size: 24px;
-  font-weight: bold;
-  text-decoration: none;
+  font-weight: 700;
+  line-height: 29.05px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: ${APPS_COLORS.HEADER_TEXT};
 `
 
 export const NavigationContainer = styled.nav`
@@ -47,11 +59,18 @@ export const NavigationContainer = styled.nav`
 `
 
 export const Link = styled(NavLink)`
-  color: white;
+  height: 24px;
+  top: 28px;
+  font-family: Inter;
   font-size: 20px;
-  font-weight: normal;
+  font-weight: 400;
+  line-height: 24.2px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: ${APPS_COLORS.HEADER_TEXT};
   text-decoration: none;
-`;
+`
 
 export const Main = styled.main`
   display: flex;
