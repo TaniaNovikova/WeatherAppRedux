@@ -7,4 +7,5 @@ export enum APPS_COLORS {
   APPS_BUTTON_BACKGROUND = "linear-gradient(0deg, #3678B4, #3678B4)",
   SEARCH_INPUT_BACKGROUND = "#ffffff1a",
   ERROR = "#F35E5E",
+  PLACEHOLDER_OPACITY = "40%",
 }

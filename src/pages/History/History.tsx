@@ -1,5 +1,5 @@
-import AppsButton from "components/AppsButton/AppsButton"
-import InfoBlock from "components/InfoBlock/InfoBlock"
+import AppsButton from "../../components/AppsButton/AppsButton"
+import InfoBlock from "../../components/InfoBlock/InfoBlock"
 import { ButtonWrapper, CardsContainer, HistoryContainer } from "./styles"
 
 function History() {

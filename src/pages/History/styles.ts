@@ -1,5 +1,5 @@
 import styled from "@emotion/styled"
-import { APPS_COLORS } from "enums"
+import { APPS_COLORS } from "../../enums"
 
 export const HistoryContainer = styled.div`
   display: flex;

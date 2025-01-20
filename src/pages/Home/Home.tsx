@@ -7,7 +7,7 @@ function Home() {
   return (
     <HomeContainer>
       <Search />
-      {/* <InfoBlock /> */}
+      <InfoBlock />
       <ErrorBlock/>
     </HomeContainer>
   )

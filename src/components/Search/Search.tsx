@@ -1,10 +1,11 @@
-import AppsButton from "components/AppsButton/AppsButton"
-import { ButtonWrapper, SearchForm, SearchInput } from "./styles"
+import Input from "../Input/Input"
+import AppsButton from "../AppsButton/AppsButton"
+import { ButtonWrapper, SearchForm} from "./styles"
 
 function Search() {
   return (
     <SearchForm>
-      <SearchInput />
+      <Input name="city"/>
       <ButtonWrapper>
       <AppsButton name="Search" />
       </ButtonWrapper>
