@@ -7,7 +7,7 @@ import {
   WeatherImage,
 } from "./styles"
 
-import Clouds from "../../assets/clouds 2.png"
+import Clouds from "assets/clouds 2.png"
 
 function InfoBlock() {
   return (

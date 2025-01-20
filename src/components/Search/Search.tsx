@@ -1,10 +1,13 @@
-import { SearchButton, SearchForm, SearchInput } from "./styles"
+import AppsButton from "components/AppsButton/AppsButton"
+import { ButtonWrapper, SearchForm, SearchInput } from "./styles"
 
 function Search() {
   return (
     <SearchForm>
       <SearchInput />
-      <SearchButton>Search</SearchButton>
+      <ButtonWrapper>
+      <AppsButton name="Search" />
+      </ButtonWrapper>
     </SearchForm>
   )
 }

@@ -1,11 +1,11 @@
 import styled from "@emotion/styled"
-import { APPS_COLORS } from "../../enums"
+import { APPS_COLORS } from "enums"
 
 export const InfoBlockContainer = styled.div`
   display: flex;
   justify-content: space-between;
   padding: 22px;
-  width: 710px;
+  width: 709px;
   height: 180px;
   background: ${APPS_COLORS.INFOBLOCK_BACKGROUND};
   backdrop-filter: blur(8px);
