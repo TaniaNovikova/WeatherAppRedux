@@ -2,19 +2,28 @@ import styled from "@emotion/styled"
 import { Dialog } from "@mui/material"
 import { APPS_COLORS } from "../../enums"
 
-
+// export const StyledModalWrapper = styled(Dialog)`
+//   & .MuiPaper-root {
+//     display: flex;
+//     gap: 15px;
+//     font-size: 28px;
+//     width: fit-content;
+//     height: fit-content;
+//     padding: 40px;
+//   }
+// `;
 export const StyledModalWrapper = styled(Dialog)`
   & .MuiPaper-root {
     display: flex;
     gap: 15px;
     width: 600px;
-    height: 400px;
+    height: 350px;
     padding: 40px;
-    border-radius: 18px;
+    border-radius:18px;
     background: ${APPS_COLORS.MODAL_BACKGROUND};
   }
   & #delete-dialog-title {
-    font-size: 26px;
+    font-size: 28px;
     display: flex;
     justify-content: center;
     font-family: Inter, sans-serif;
@@ -22,7 +31,7 @@ export const StyledModalWrapper = styled(Dialog)`
     color: ${APPS_COLORS.TEXT_WHITE};
   }
   & #delete-dialog-description {
-    font-size: 24px;
+    font-size: 26px;
     font-family: Inter, sans-serif;
     font-weight: 400;
     color: ${APPS_COLORS.TEXT_WHITE};

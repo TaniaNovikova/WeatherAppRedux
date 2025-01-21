@@ -1,10 +1,9 @@
 import styled from "@emotion/styled"
-// import { APPS_COLORS } from "enums"
 import { APPS_COLORS } from "../../enums"
 
-interface MainButtonProps {
-  disabled: boolean
-}
+// interface MainButtonProps {
+//   disabled: boolean
+// }
 
 interface StyledButtonProps {
   $backgroundColor: string

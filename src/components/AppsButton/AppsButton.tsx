@@ -10,7 +10,6 @@ function AppsButton({
   isRed=false,
   backgroundColor=APPS_COLORS.APPS_BUTTON_BACKGROUND,
 }: ButtonProps) {
-  // console.log(props.buttonName);
 
   return (
     <MainButton onClick={onClick} type={type} disabled={disabled} $backgroundColor={backgroundColor} $isRed={isRed}  >

@@ -6,32 +6,39 @@ import {
 } from "./styles"
 import { ModalProps } from "./types"
 import AppsButton from "../AppsButton/AppsButton"
-import DeleteIcon from "@mui/icons-material/Delete"
 import { APPS_COLORS } from "../../enums"
+import CheckCircleIcon from "@mui/icons-material/CheckCircle"
+import DoneIcon from "@mui/icons-material/Done"
+import TaskAltIcon from "@mui/icons-material/TaskAlt"
 
-function ModalDelete({ open, onClose}: ModalProps) {
+function ModalCreate({ open, onClose, children }: ModalProps) {
   return (
     <>
+      {/* <StyledModalWrapper open={open} onClose={onClose}>
+        {children}
+      </StyledModalWrapper> */}
       <StyledModalWrapper
         open={open}
         onClose={onClose}
         aria-labelledby="delete-dialog-title"
         aria-describedby="delete-dialog-description"
       >
-        <DeleteIcon style={{ color: APPS_COLORS.ERROR, fontSize: "32px" }} />
-        <DialogTitle>Delete All Cards?</DialogTitle>
+          <TaskAltIcon
+            style={{ color: APPS_COLORS.TEXT_WHITE, fontSize: "40px" }}
+          />
+        <DialogTitle>Weather card is created</DialogTitle>
         <DialogContent>
-          <DialogContentText id="delete-dialog-description">
+          {/* <DialogContentText id="delete-dialog-description">
             Are you sure you want to remove all cards? This action cannot be
             undone.
-          </DialogContentText>
+          </DialogContentText> */}
         </DialogContent>
         <DialogActions>
           <ButtonDialogControl>
-            <AppsButton onClick={onClose} name="Cansel" />
+            <AppsButton onClick={onClose} name="Save" />
           </ButtonDialogControl>
           <ButtonDialogControl>
-            <AppsButton onClick={onClose} name="Delete" isRed />
+            <AppsButton onClick={onClose} name="Remove" />
           </ButtonDialogControl>
         </DialogActions>
       </StyledModalWrapper>
@@ -39,4 +46,4 @@ function ModalDelete({ open, onClose}: ModalProps) {
   )
 }
 
-export default ModalDelete
+export default ModalCreate
