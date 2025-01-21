@@ -1,6 +1,7 @@
 import AppsButton from "../../components/AppsButton/AppsButton"
 import InfoBlock from "../../components/InfoBlock/InfoBlock"
 import { ButtonWrapper, CardsContainer, HistoryContainer } from "./styles"
+import ModalDelete from "../../components/ModalDelete/ModalDelete"
 
 function History() {
   return (
@@ -12,8 +13,9 @@ function History() {
         <InfoBlock />
       </CardsContainer>
       <ButtonWrapper>
-      <AppsButton name="Delete all cards" />
+        <AppsButton name="Delete all cards" />
       </ButtonWrapper>
+      <ModalDelete open={false} onClose={() => {}} children={undefined} />
     </HistoryContainer>
   )
 }

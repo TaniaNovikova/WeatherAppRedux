@@ -8,4 +8,5 @@ export enum APPS_COLORS {
   SEARCH_INPUT_BACKGROUND = "#ffffff1a",
   ERROR = "#F35E5E",
   PLACEHOLDER_OPACITY = "40%",
+  MODAL_BACKGROUND="#122d4d",
 }
