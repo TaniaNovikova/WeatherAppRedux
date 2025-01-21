@@ -3,10 +3,12 @@ import { APPS_COLORS } from "../../enums"
 
 export const ErrorBlockContainer = styled.div`
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
   width: 709px;
   height: 180px;
-  padding: 16px;
+  padding: 14px;
   border-radius: 18px;
   background: ${APPS_COLORS.INFOBLOCK_BACKGROUND};
 `
@@ -32,4 +34,8 @@ export const ErrorTextWrapper= styled.div`
 display: flex;
 flex-direction: column;
 align-items: center;
+`
+export const ButtonWrapper = styled.div`
+  width: 155px;
+  height: 48px;
 `

@@ -7,12 +7,21 @@ function AppsButton({
   type = "button",
   onClick,
   disabled = false,
-  isRed=false,
-  backgroundColor=APPS_COLORS.APPS_BUTTON_BACKGROUND,
+  isRed = false,
+  backgroundColor = APPS_COLORS.APPS_BUTTON_BACKGROUND,
+  borderColor = APPS_COLORS.TEXT_WHITE,
+  isMain = false,
 }: ButtonProps) {
-
   return (
-    <MainButton onClick={onClick} type={type} disabled={disabled} $backgroundColor={backgroundColor} $isRed={isRed}  >
+    <MainButton
+      onClick={onClick}
+      type={type}
+      disabled={disabled}
+      $backgroundColor={backgroundColor}
+      $isRed={isRed}
+      $isMain={isMain}
+      $borderColor={borderColor}
+    >
       {name}
     </MainButton>
   )

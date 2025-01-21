@@ -3,14 +3,22 @@ import { APPS_COLORS } from "../../enums"
 
 export const InfoBlockContainer = styled.div`
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  padding: 22px;
+  padding: 20px;
   width: 709px;
   height: 180px;
   background: ${APPS_COLORS.INFOBLOCK_BACKGROUND};
   backdrop-filter: blur(8px);
   border-radius: 18px;
 `
+export const WeatherDataWrapper = styled.div`
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  justify-content: space-between;
+`
+
 export const TemperatureWrapper = styled.div`
   width: 89.13px;
   height: 56.45px;
@@ -18,8 +26,6 @@ export const TemperatureWrapper = styled.div`
   font-weight: 500;
   line-height: 68.98px;
   text-align: left;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
   color: ${APPS_COLORS.TEXT_WHITE};
 `
 export const CityNameWrapper = styled.div`
@@ -40,4 +46,15 @@ export const ImageWrapper = styled.div`
 export const WeatherImage = styled.img`
   width: 100%;
   height: 100%;
+`
+export const ButtonsContainer = styled.div`
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+`
+export const ButtonWrapper = styled.div`
+  width: 155px;
+  height: 48px;
 `

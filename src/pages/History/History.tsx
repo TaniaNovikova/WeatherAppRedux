@@ -13,7 +13,7 @@ function History() {
         <InfoBlock />
       </CardsContainer>
       <ButtonWrapper>
-        <AppsButton name="Delete all cards" />
+        <AppsButton name="Delete all cards" isMain/>
       </ButtonWrapper>
       <ModalDelete open={false} onClose={() => {}} children={undefined} />
     </HistoryContainer>
