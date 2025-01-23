@@ -37,6 +37,7 @@ export const MainButton = styled.button<StyledButtonProps>`
   font-size: 20px;
   font-weight: 400;
   line-height: 24.2px;
+  cursor: pointer;
   color: ${APPS_COLORS.TEXT_WHITE};
   &:hover {
     background: ${APPS_COLORS.APPS_BUTTON_BACKGROUND_HOVER};

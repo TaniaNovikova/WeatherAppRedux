@@ -1,4 +1,6 @@
 import { APPS_COLORS } from "../../enums"
+import { useAppDispatch } from "../../store/hooks"
+import { weatherActions } from "../../store/redux/weatherApp/weatherAppSlice"
 import AppsButton from "../AppsButton/AppsButton"
 import {
   ButtonWrapper,
@@ -7,19 +9,27 @@ import {
   LargeTextWrapper,
   SmallTextWrapper,
 } from "./styles"
+import { ErrorDataProps } from "./types"
 
-function ErrorBlock() {
+function ErrorBlock(error: ErrorDataProps) {
+    const dispatch = useAppDispatch()
+
+    const onDelete= ()=>{
+      dispatch(weatherActions.removeErrorBlock())
+    }
+  
   return (
     <ErrorBlockContainer>
       <ErrorTextWrapper>
-        <LargeTextWrapper>API Error</LargeTextWrapper>
-        <SmallTextWrapper>Something went wrong with API data</SmallTextWrapper>
+         <LargeTextWrapper>{error.error.errorName}</LargeTextWrapper> 
+        <SmallTextWrapper>{error.error.errorMessage}</SmallTextWrapper>
       </ErrorTextWrapper>
       <ButtonWrapper>
           <AppsButton
             name="Delete"
             backgroundColor={APPS_COLORS.INFOBLOCK_BACKGROUND}
             borderColor={APPS_COLORS.TEXT_WHITE}
+            onClick={onDelete}
           />
         </ButtonWrapper>
     </ErrorBlockContainer>

@@ -20,6 +20,8 @@ export const WeatherDataWrapper = styled.div`
 `
 
 export const TemperatureWrapper = styled.div`
+  display: flex;
+  justify-content: center;
   width: 89.13px;
   height: 56.45px;
   font-size: 57px;
@@ -37,14 +39,18 @@ export const CityNameWrapper = styled.div`
 export const InfoTextWrapper = styled.div`
   display: flex;
   flex-direction: column;
+  gap:2px;
+  align-items: center;
 `
 
 export const ImageWrapper = styled.div`
   width: 290px;
   height: 74px;
+  display: flex;
+  justify-content: center;
 `
 export const WeatherImage = styled.img`
-  width: 100%;
+  width: fit-content;
   height: 100%;
 `
 export const ButtonsContainer = styled.div`

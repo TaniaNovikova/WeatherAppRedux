@@ -10,9 +10,10 @@ import { APPS_COLORS } from "../../enums"
 import CheckCircleIcon from "@mui/icons-material/CheckCircle"
 import DoneIcon from "@mui/icons-material/Done"
 import TaskAltIcon from "@mui/icons-material/TaskAlt"
+import { useState } from "react"
 
 function ModalCreate({ open, onClose, children }: ModalProps) {
-  return (
+     return (
     <>
       {/* <StyledModalWrapper open={open} onClose={onClose}>
         {children}
@@ -23,10 +24,10 @@ function ModalCreate({ open, onClose, children }: ModalProps) {
         aria-labelledby="delete-dialog-title"
         aria-describedby="delete-dialog-description"
       >
-          <TaskAltIcon
-            style={{ color: APPS_COLORS.TEXT_WHITE, fontSize: "40px" }}
-          />
-        <DialogTitle>Weather card is created</DialogTitle>
+        <TaskAltIcon
+          style={{ color: APPS_COLORS.TEXT_WHITE, fontSize: "40px" }}
+        />
+        <DialogTitle>Weather card is created!</DialogTitle>
         <DialogContent>
           {/* <DialogContentText id="delete-dialog-description">
             Are you sure you want to remove all cards? This action cannot be
@@ -35,10 +36,7 @@ function ModalCreate({ open, onClose, children }: ModalProps) {
         </DialogContent>
         <DialogActions>
           <ButtonDialogControl>
-            <AppsButton onClick={onClose} name="Save" />
-          </ButtonDialogControl>
-          <ButtonDialogControl>
-            <AppsButton onClick={onClose} name="Remove" />
+            <AppsButton onClick={onClose} name="OK" />
           </ButtonDialogControl>
         </DialogActions>
       </StyledModalWrapper>
