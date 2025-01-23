@@ -14,13 +14,9 @@ import { weatherActions } from "../../store/redux/weatherApp/weatherAppSlice"
 function Search() {
   const dispatch = useAppDispatch()
 
-  // const validationSchema = Yup.object().shape({
-  //   city: Yup.string().required("City name is missing"),
-  // })
-
   const validationSchema = Yup.object().shape({
     city: Yup.string()
-      .required("City name is missing")
+      // .required("City name is missing")
       .matches(
         /^[\p{L}\s\-]+$/u,
         "City name can only contain letters, spaces, and hyphens",
@@ -75,8 +71,12 @@ function Search() {
     validateOnChange: true,
     onSubmit: values => {
       //  console.log(values.city)
-      dispatch(weatherActions.getWeather(values.city))
-      values.city = ""
+      if (values.city) {
+        dispatch(weatherActions.getWeather(values.city))
+        values.city = ""
+      } else {
+        alert("Please enter a city!")
+      }
     },
   })
   return (
@@ -89,9 +89,7 @@ function Search() {
           onChange={formik.handleChange}
         />
         {formik.errors.city && formik.touched.city && (
-          <StyledErrorMessage >
-            {formik.errors.city}
-          </StyledErrorMessage>
+          <StyledErrorMessage>{formik.errors.city}</StyledErrorMessage>
         )}
       </InputAndErrorWrapper>
       <ButtonWrapper>
