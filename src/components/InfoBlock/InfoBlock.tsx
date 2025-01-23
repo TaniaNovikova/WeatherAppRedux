@@ -15,21 +15,10 @@ import { APPS_COLORS } from "../../enums"
 import { useAppDispatch } from "../../store/hooks"
 import { weatherActions } from "../../store/redux/weatherApp/weatherAppSlice"
 import { WeatherDataProps } from "./types"
-import { useEffect, useState } from "react"
-import Modal from "../Modal/Modal"
+
 
 function InfoBlock(weatherData: WeatherDataProps) {
-  const [isModalOpen, setIsModalOpen] = useState<boolean>(false)
-
-  const openModal = () => {
-    setIsModalOpen(true)
-  }
-
-  const closeModal = () => {
-    setIsModalOpen(false)
-  }
-
-  const dispatch = useAppDispatch()
+    const dispatch = useAppDispatch()
 
   const temperature: number = Math.round(
     Number(weatherData.weatherData.temperature) - 273.15,
@@ -39,15 +28,12 @@ function InfoBlock(weatherData: WeatherDataProps) {
 
   const onSave = () => {
     dispatch(weatherActions.saveWeatherCard(weatherData.weatherData))
-    setIsModalOpen(true)
   }
 
   const onDelete = () => {
     dispatch(weatherActions.deleteWeatherCard(weatherData.weatherData.id))
   }
-  useEffect(() => {
-    setIsModalOpen
-  }, [isModalOpen])
+  
 
   return (
     <InfoBlockContainer>
@@ -82,7 +68,6 @@ function InfoBlock(weatherData: WeatherDataProps) {
           />
         </ButtonWrapper>
       </ButtonsContainer>
-      <Modal open={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </InfoBlockContainer>
   )
 }

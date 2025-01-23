@@ -1,7 +1,6 @@
-import AppsButton from "../../components/AppsButton/AppsButton"
-import InfoBlock from "../../components/InfoBlock/InfoBlock"
+import AppsButton from "components/AppsButton/AppsButton"
+import InfoBlock from "components/InfoBlock/InfoBlock"
 import { ButtonWrapper, CardsContainer, HistoryContainer } from "./styles"
-import ModalDelete from "../../components/ModalDelete/ModalDelete"
 import { useAppDispatch, useAppSelector } from "../../store/hooks"
 import {
   weatherActions,
@@ -31,7 +30,6 @@ function History() {
           />
         )}
       </ButtonWrapper>
-      <ModalDelete open={false} onClose={() => {}} children={undefined} />
     </HistoryContainer>
   )
 }

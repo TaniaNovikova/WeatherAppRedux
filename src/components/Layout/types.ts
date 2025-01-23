@@ -4,7 +4,4 @@ export interface LayoutProps {
   children: ReactNode
 }
 
-// export enum PagesPaths {
-//   HOME = "/home",
-//   HISTORY = "/history",
-// }
+

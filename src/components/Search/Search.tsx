@@ -10,7 +10,6 @@ import { useFormik } from "formik"
 import * as Yup from "yup"
 import { useAppDispatch } from "../../store/hooks"
 import { weatherActions } from "../../store/redux/weatherApp/weatherAppSlice"
-import { useState } from "react"
 
 function Search() {
   const dispatch = useAppDispatch()
