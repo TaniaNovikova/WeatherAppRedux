@@ -39,7 +39,7 @@ export const CityNameWrapper = styled.div`
 export const InfoTextWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  gap:2px;
+  gap:4px;
   align-items: center;
 `
 
