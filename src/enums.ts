@@ -12,6 +12,6 @@ export enum APPS_COLORS {
 }
 
 export enum PagesPaths {
-  HOME = "/home",
+  HOME = "/",
   HISTORY = "/history",
 }

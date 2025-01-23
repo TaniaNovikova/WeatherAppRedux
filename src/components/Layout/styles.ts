@@ -78,6 +78,6 @@ export const Main = styled.main`
   display: flex;
   flex-direction: column;
   flex: 1;
-  padding-top: 80px;
+  padding-top: 40px;
   gap: 40px;
 `
