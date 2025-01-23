@@ -11,7 +11,7 @@ import {
 } from "./styles"
 
 import { LayoutProps } from "./types"
-import { PagesPaths } from "./types"
+import { PagesPaths } from "../../enums"
 
 function Layout({ children }: LayoutProps) {
   const navigate = useNavigate()

@@ -3,7 +3,6 @@ import { v4 } from "uuid"
 
 import { WeatherAppSliceState, WeatherObject } from "./types"
 import axios from "axios"
-import { Alert } from "@mui/material"
 import { createAppSlice } from "../../createAppSlice"
 
 const appWeatherInitialState: WeatherAppSliceState = {
@@ -12,33 +11,41 @@ const appWeatherInitialState: WeatherAppSliceState = {
   error: undefined,
   isPending: false,
 }
-//const APP_ID = "2384509c637be76d3ba8faf7190877";//Это битый ключ для отлова ошибки
 
 export const weatherAppSlice = createAppSlice({
   name: "WEATHER_APP",
   initialState: appWeatherInitialState,
   reducers: create => ({
     getWeather: create.asyncThunk(
-      async (cityName: string) => {
+      async (city: string) => {
         const APP_ID = "2384509c637be76d3ba8faf719087789"
-
-        const response = await axios.get(
-          `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${APP_ID}`,
-        )
-        return response
+        // const APP_ID = "2384509c637be76d3ba8faf7190877" 
+        try {
+          const result = await axios.get(
+            `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${APP_ID}`,
+          )
+          return result
+        } catch (error: any) {
+          // Преобразуем ошибку для rejected
+          throw {
+            name: error.name || "UnknownError",
+            message:
+              error.response?.data?.message ||
+              error.message ||
+              "Unexpected error",
+          }
+        }
       },
       {
         pending: (state: WeatherAppSliceState) => {
-          // state.error = undefined
           state.isPending = true
         },
         fulfilled: (state: WeatherAppSliceState, action) => {
-          // console.log(action.payload);
-
           const id = v4()
           const temperature = action.payload.data.main.temp
           const iconCode = action.payload.data.weather[0].icon
           const city = action.payload.data.name
+
           state.isPending = false
           state.currentWeatherData = {
             id: id,
@@ -48,15 +55,12 @@ export const weatherAppSlice = createAppSlice({
           }
         },
         rejected: (state: WeatherAppSliceState, action) => {
-          const errorName = action.error.name
-          console.log(action.error.name);
-          
-          const errorMessage = action.error.message
           state.error = {
-             errorName: errorName,
-             errorMessage: errorMessage,
+            errorName: action.error.name,
+            errorMessage: action.error.message,
+            errorCode: action.error.code,
           }
-
+          state.currentWeatherData = undefined
           state.isPending = false
         },
       },
@@ -76,7 +80,9 @@ export const weatherAppSlice = createAppSlice({
       },
     ),
     deleteAllCards: create.reducer(() => appWeatherInitialState),
-    removeErrorBlock: create.reducer((state: WeatherAppSliceState)=>state.error=undefined)
+    removeErrorBlock: create.reducer(
+      (state: WeatherAppSliceState) => (state.error = undefined),
+    ),
   }),
   selectors: {
     weatherState: (state: WeatherAppSliceState) => state,
@@ -84,5 +90,4 @@ export const weatherAppSlice = createAppSlice({
 })
 
 export const weatherActions = weatherAppSlice.actions
-
 export const weatherSelectors = weatherAppSlice.selectors

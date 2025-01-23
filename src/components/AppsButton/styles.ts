@@ -17,7 +17,7 @@ const getButtonColor = (
   return $isRed ? APPS_COLORS.ERROR : $backgroundColor
 }
 
-const getBorderColor = ($isMain: boolean | undefined, $borderColor: string) => {
+const getBorderColor = ($isMain: boolean | undefined) => {
   return $isMain ? "transparent" : APPS_COLORS.TEXT_WHITE
 }
 
@@ -32,7 +32,7 @@ export const MainButton = styled.button<StyledButtonProps>`
   gap: 10px;
   border: 1px solid;
   border-color: ${({ $isMain, $borderColor }) =>
-    getBorderColor($isMain, $borderColor)};
+    getBorderColor($isMain)};
   border-radius: 50px;
   font-size: 20px;
   font-weight: 400;
@@ -40,7 +40,7 @@ export const MainButton = styled.button<StyledButtonProps>`
   cursor: pointer;
   color: ${APPS_COLORS.TEXT_WHITE};
   &:hover {
-    background: ${APPS_COLORS.APPS_BUTTON_BACKGROUND_HOVER};
+    background: ${APPS_COLORS.HEADER_BACKGROUND};
   }
   &:disabled {
     cursor: not-allowed;

@@ -9,7 +9,9 @@ export const LayoutWrapper = styled.div`
   flex-direction: column;
   flex: 1;
   background-image: url(${backgroundImage});
-  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 `
 
 export const Header = styled.div`

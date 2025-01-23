@@ -7,7 +7,8 @@ export const ErrorBlockContainer = styled.div`
   align-items: center;
   justify-content: space-between;
   width: 709px;
-  height: 180px;
+  min-height: 200px;
+  height:fit-content;
   padding: 14px;
   border-radius: 18px;
   background: ${APPS_COLORS.INFOBLOCK_BACKGROUND};

@@ -12,7 +12,7 @@ import DoneIcon from "@mui/icons-material/Done"
 import TaskAltIcon from "@mui/icons-material/TaskAlt"
 import { useState } from "react"
 
-function ModalCreate({ open, onClose, children }: ModalProps) {
+function Modal({ open, onClose }: ModalProps) {
      return (
     <>
       {/* <StyledModalWrapper open={open} onClose={onClose}>
@@ -44,4 +44,4 @@ function ModalCreate({ open, onClose, children }: ModalProps) {
   )
 }
 
-export default ModalCreate
+export default Modal

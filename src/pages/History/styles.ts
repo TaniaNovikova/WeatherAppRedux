@@ -15,7 +15,7 @@ export const CardsContainer = styled.div`
   gap: 80px;
 
   width: 760px;
-  height: 600px;
+  height: 700px;
 
   overflow-y: auto;
   &::-webkit-scrollbar {
