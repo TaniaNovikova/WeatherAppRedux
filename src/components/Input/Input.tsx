@@ -24,8 +24,8 @@ function Input({
         placeholder={placeholder}
         className="input-element"
       />
-      <ErrorMessage>{error}</ErrorMessage>
-      {/* {error && <ErrorMessage>{error}</ErrorMessage>} */}
+      {/* <ErrorMessage>{error}</ErrorMessage> */}
+       {error && <ErrorMessage>{error}</ErrorMessage>} 
     </InputContainer>
   )
 }

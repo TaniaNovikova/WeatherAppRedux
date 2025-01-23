@@ -4,6 +4,7 @@ import { APPS_COLORS } from "../../enums"
 export const InputContainer = styled.div`
   display: flex;
   flex-direction: column;
+  align-items:center;
   gap: 4px;
   width: 100%;
 `
@@ -25,9 +26,7 @@ export const InputElement = styled.input`
   font-weight: 400;
   line-height: 24.2px;
   color: ${APPS_COLORS.TEXT_WHITE};
-  /* &:hover {
-    background: ${APPS_COLORS.APPS_BUTTON_BACKGROUND_HOVER};
-  } */
+  
     &:focus {
       color: ${APPS_COLORS.TEXT_WHITE};
       background:${APPS_COLORS.APPS_BUTTON_BACKGROUND}

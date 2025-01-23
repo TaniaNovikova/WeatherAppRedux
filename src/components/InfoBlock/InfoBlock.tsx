@@ -10,13 +10,13 @@ import {
   WeatherImage,
 } from "./styles"
 
-import ModalCreate from "../../components/ModalCreate/ModalCreate"
 import AppsButton from "../AppsButton/AppsButton"
 import { APPS_COLORS } from "../../enums"
 import { useAppDispatch } from "../../store/hooks"
 import { weatherActions } from "../../store/redux/weatherApp/weatherAppSlice"
 import { WeatherDataProps } from "./types"
-import { useState } from "react"
+import { useEffect, useState } from "react"
+import Modal from "../Modal/Modal"
 
 function InfoBlock(weatherData: WeatherDataProps) {
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false)
@@ -45,6 +45,9 @@ function InfoBlock(weatherData: WeatherDataProps) {
   const onDelete = () => {
     dispatch(weatherActions.deleteWeatherCard(weatherData.weatherData.id))
   }
+  useEffect(() => {
+    setIsModalOpen
+  }, [isModalOpen])
 
   return (
     <InfoBlockContainer>
@@ -79,6 +82,7 @@ function InfoBlock(weatherData: WeatherDataProps) {
           />
         </ButtonWrapper>
       </ButtonsContainer>
+      <Modal open={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </InfoBlockContainer>
   )
 }

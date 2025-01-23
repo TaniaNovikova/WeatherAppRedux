@@ -10,3 +10,8 @@ export enum APPS_COLORS {
   PLACEHOLDER_OPACITY = "40%",
   MODAL_BACKGROUND="#122d4d",
 }
+
+export enum PagesPaths {
+  HOME = "/home",
+  HISTORY = "/history",
+}

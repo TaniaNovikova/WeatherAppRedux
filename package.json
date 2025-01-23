@@ -20,6 +20,7 @@
     "@mui/icons-material": "^6.4.0",
     "@mui/material": "^6.4.0",
     "@reduxjs/toolkit": "^2.0.1",
+    "@types/node": "^22.10.9",
     "@types/uuid": "^10.0.0",
     "axios": "^1.7.9",
     "formik": "^2.4.6",

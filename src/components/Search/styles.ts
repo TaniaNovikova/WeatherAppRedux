@@ -14,3 +14,10 @@ export const ButtonWrapper = styled.div`
   width: 146px;
   height: 48px;
 `
+export const StyledErrorMessage =styled.div`
+color: ${APPS_COLORS.ERROR}
+`
+export const InputAndErrorWrapper=styled.div`
+display: flex;
+flex-direction: column;
+`
