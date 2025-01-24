@@ -1,13 +1,5 @@
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
-
-export default defineConfig({
-  plugins: [react()],
-  build: {
-    outDir: 'dist', // Папка для финальной сборки
-    sourcemap: true, // Генерация source maps для удобной отладки
-  },
-  server: {
-    port: 3000, // Локальный сервер разработки
-  },
-});
+"scripts": {
+  "build": "tsc && vite build",
+  "predeploy": "npm run build",
+  "deploy": "gh-pages -d dist"
+}

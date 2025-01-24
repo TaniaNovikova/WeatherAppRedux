@@ -15,9 +15,11 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-    "types": ["vitest/globals"],
-    
+    "types": ["vitest/globals"]
   },
-
+  "exclude": [
+    "vite.config.ts", // Исключаем файл конфигурации Vite
+    "node_modules"    // Исключаем зависимости
+  ],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
