@@ -12,14 +12,14 @@ export const CardsContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  gap: 35px;
+  gap: 80px;
 
   width: 760px;
-  height: 400px;
+  height: 500px;
 
   overflow-y: auto;
   &::-webkit-scrollbar {
-    height: 330px;
+    height: 440px;
     width: 20px;
   }
   &::-webkit-scrollbar-track {
@@ -39,7 +39,7 @@ export const CardsContainer = styled.div`
 export const ButtonWrapper = styled.div`
   width: 740px;
   position: fixed;
-  bottom: 2px;
+  bottom: 20px;
   left: 50%; /* Позиционирует элемент относительно ширины экрана */
   transform: translateX(-50%); /* Центрирует элемент по горизонтали */
 `
