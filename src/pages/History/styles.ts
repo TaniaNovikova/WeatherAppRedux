@@ -15,11 +15,11 @@ export const CardsContainer = styled.div`
   gap: 80px;
 
   width: 760px;
-  height: 500px;
+  height: 700px;
 
   overflow-y: auto;
   &::-webkit-scrollbar {
-    height: 440px;
+    height: 500px;
     width: 20px;
   }
   &::-webkit-scrollbar-track {
