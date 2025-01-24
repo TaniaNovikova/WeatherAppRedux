@@ -15,11 +15,11 @@ export const CardsContainer = styled.div`
   gap: 80px;
 
   width: 760px;
-  height: 700px;
+  height: 480px;
 
   overflow-y: auto;
   &::-webkit-scrollbar {
-    height: 500px;
+    height: 440px;
     width: 20px;
   }
   &::-webkit-scrollbar-track {
@@ -39,7 +39,7 @@ export const CardsContainer = styled.div`
 export const ButtonWrapper = styled.div`
   width: 740px;
   position: fixed;
-  bottom: 20px;
+  bottom: 80px;
   left: 50%; /* Позиционирует элемент относительно ширины экрана */
   transform: translateX(-50%); /* Центрирует элемент по горизонтали */
 `
