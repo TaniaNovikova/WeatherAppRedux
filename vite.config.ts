@@ -5,6 +5,10 @@ import path from "path"
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
+  build: {
+    outDir: 'dist', // Папка для финальной сборки
+    sourcemap: true, // Генерация source maps для удобной отладки
+  },
   server: {
     open: true,
   },
