@@ -337,14 +337,14 @@ display: flex;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  gap: 35px;
+  gap: 80px;
 
   width: 760px;
-  height: 400px;
+  height: 500px;
 
   overflow-y: auto;
   &::-webkit-scrollbar {
-    height: 330px;
+    height: 440px;
     width: 20px;
   }
   &::-webkit-scrollbar-track {
@@ -363,7 +363,7 @@ display: flex;
 `,AP=H.div`
   width: 740px;
   position: fixed;
-  bottom: 2px;
+  bottom: 20px;
   left: 50%; /* Позиционирует элемент относительно ширины экрана */
   transform: translateX(-50%); /* Центрирует элемент по горизонтали */
 `;function $P(){const e=ba(),{weather:t}=Mg(kv.weatherState),n=t.map(i=>$.jsx(Cv,{weatherData:i,hasSaveButton:!1})),r=()=>{e(ro.deleteAllCards())};return $.jsxs(bP,{children:[$.jsx(PP,{children:n}),$.jsx(AP,{children:t.length&&$.jsx(io,{name:"Delete all cards",isMain:!0,onClick:r})})]})}const NP=()=>$.jsx(KE,{children:$.jsx(d_,{children:$.jsxs(xE,{children:[$.jsx(zu,{path:Lr.HOME,element:$.jsx(OP,{})}),$.jsx(zu,{path:Lr.HISTORY,element:$.jsx($P,{})})]})})});var FP=Zt("__rtkq/focused"),jP=Zt("__rtkq/unfocused"),DP=Zt("__rtkq/online"),LP=Zt("__rtkq/offline"),Ks=!1;function IP(e,t){function n(){const r=()=>e(FP()),i=()=>e(jP()),o=()=>e(DP()),l=()=>e(LP()),a=()=>{window.document.visibilityState==="visible"?r():i()};return Ks||typeof window<"u"&&window.addEventListener&&(window.addEventListener("visibilitychange",a,!1),window.addEventListener("focus",r,!1),window.addEventListener("online",o,!1),window.addEventListener("offline",l,!1),Ks=!0),()=>{window.removeEventListener("focus",r),window.removeEventListener("visibilitychange",a),window.removeEventListener("online",o),window.removeEventListener("offline",l),Ks=!1}}return n()}const MP=VC(Lf),zP=e=>{const t=gC({reducer:MP,preloadedState:e});return IP(t.dispatch),t},UP=zP(),BP=Yx`
@@ -397,4 +397,4 @@ display: flex;
   }
  
 `;function HP(){return $.jsx(Qx,{styles:BP})}const Mh=document.getElementById("root");if(Mh)Zy(Mh).render($.jsx(Qh.StrictMode,{children:$.jsxs(gS,{store:UP,children:[$.jsx(HP,{}),$.jsx(NP,{})]})}));else throw new Error("Root element with ID 'root' was not found in the document. Ensure there is a corresponding HTML element with the ID 'root' in your HTML file.")});export default VP();
-//# sourceMappingURL=index-gSH5Ym0P.js.map
+//# sourceMappingURL=index-BaSi32Jl.js.map
