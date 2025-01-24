@@ -11,13 +11,13 @@ import {
 } from "./styles"
 
 import { LayoutProps } from "./types"
-import { PagesPaths } from "../../enums"
+import { PAGES_PATHS } from "enums"
 
 function Layout({ children }: LayoutProps) {
   const navigate = useNavigate()
 
   const goToHomePage = () => {
-    navigate(PagesPaths.HOME)
+    navigate(PAGES_PATHS.HOME)
   }
 
   return (
@@ -31,7 +31,7 @@ function Layout({ children }: LayoutProps) {
             style={({ isActive }) => ({
               fontWeight: isActive ? "700" : "400",
             })}
-            to={PagesPaths.HOME}
+            to={PAGES_PATHS.HOME}
           >
             Home
           </Link>
@@ -39,7 +39,7 @@ function Layout({ children }: LayoutProps) {
             style={({ isActive }) => ({
               fontWeight: isActive ? "700" : "400",
             })}
-            to={PagesPaths.HISTORY}
+            to={PAGES_PATHS.HISTORY}
           >
             History
           </Link>

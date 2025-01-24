@@ -11,7 +11,6 @@ function Input({
   onChange,
   error,
 }: InputProps) {
-  // console.log("Input render or re-render");
 
   return (
     <InputContainer>

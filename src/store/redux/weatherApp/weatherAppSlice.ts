@@ -3,7 +3,7 @@ import { v4 } from "uuid"
 
 import { WeatherAppSliceState, WeatherObject } from "./types"
 import axios from "axios"
-import { createAppSlice } from "../../createAppSlice"
+import { createAppSlice } from "store/createAppSlice"
 
 const appWeatherInitialState: WeatherAppSliceState = {
   currentWeatherData: undefined,

@@ -1,7 +1,7 @@
-import { APPS_COLORS } from "../../enums"
-import { useAppDispatch } from "../../store/hooks"
-import { weatherActions } from "../../store/redux/weatherApp/weatherAppSlice"
-import AppsButton from "../AppsButton/AppsButton"
+import { APPS_COLORS } from "enums"
+import { useAppDispatch } from "store/hooks"
+import { weatherActions } from "store/redux/weatherApp/weatherAppSlice"
+import AppsButton from "components/AppsButton/AppsButton"
 import {
   ButtonWrapper,
   ErrorBlockContainer,

@@ -11,7 +11,7 @@ export enum APPS_COLORS {
   MODAL_BACKGROUND="#122d4d",
 }
 
-export enum PagesPaths {
+export enum PAGES_PATHS {
   HOME = "/",
   HISTORY = "/history",
 }

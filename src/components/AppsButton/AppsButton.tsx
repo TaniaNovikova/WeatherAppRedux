@@ -1,4 +1,4 @@
-import { APPS_COLORS } from "../../enums"
+import { APPS_COLORS } from "enums"
 import { MainButton } from "./styles"
 import { ButtonProps } from "./types"
 

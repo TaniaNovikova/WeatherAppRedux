@@ -1,12 +1,12 @@
 import AppsButton from "components/AppsButton/AppsButton"
 import InfoBlock from "components/InfoBlock/InfoBlock"
 import { ButtonWrapper, CardsContainer, HistoryContainer } from "./styles"
-import { useAppDispatch, useAppSelector } from "../../store/hooks"
+import { useAppDispatch, useAppSelector } from "store/hooks"
 import {
   weatherActions,
   weatherSelectors,
-} from "../../store/redux/weatherApp/weatherAppSlice"
-import { WeatherObject } from "../../store/redux/weatherApp/types"
+} from "store/redux/weatherApp/weatherAppSlice"
+import { WeatherObject } from "store/redux/weatherApp/types"
 
 function History() {
   const dispatch = useAppDispatch()

@@ -1,8 +1,8 @@
 import styled from "@emotion/styled"
 import { NavLink, Link as SimpleLink } from "react-router-dom"
 
-import backgroundImage from "../../assets/pic 2.png"
-import { APPS_COLORS } from "../../enums"
+import backgroundImage from "assets/pic 2.png"
+import { APPS_COLORS } from "enums"
 
 export const LayoutWrapper = styled.div`
   display: flex;
