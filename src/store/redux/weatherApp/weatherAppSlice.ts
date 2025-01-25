@@ -19,7 +19,7 @@ export const weatherAppSlice = createAppSlice({
     getWeather: create.asyncThunk(
       async (city: string) => {
         const APP_ID = "2384509c637be76d3ba8faf719087789"
-        // const APP_ID = "2384509c637be76d3ba8faf7190877" 
+        // const APP_ID = "2384509c637be76d3ba8faf7190877"
         try {
           const result = await axios.get(
             `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${APP_ID}`,
@@ -45,7 +45,8 @@ export const weatherAppSlice = createAppSlice({
           const temperature = action.payload.data.main.temp
           const iconCode = action.payload.data.weather[0].icon
           const city = action.payload.data.name
-
+          
+          state.error = undefined
           state.isPending = false
           state.currentWeatherData = {
             id: id,
@@ -80,6 +81,7 @@ export const weatherAppSlice = createAppSlice({
       },
     ),
     deleteAllCards: create.reducer(() => appWeatherInitialState),
+
     removeErrorBlock: create.reducer(
       (state: WeatherAppSliceState) => (state.error = undefined),
     ),
