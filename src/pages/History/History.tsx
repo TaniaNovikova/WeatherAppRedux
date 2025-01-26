@@ -34,7 +34,7 @@ function History() {
     dispatch(weatherActions.onModalOpen())
   }
 
-   useEffect(() => setIsModalOpen(hasModalOpen), [hasModalOpen])
+  useEffect(() => setIsModalOpen(hasModalOpen), [hasModalOpen])
 
   return (
     <HistoryContainer>
