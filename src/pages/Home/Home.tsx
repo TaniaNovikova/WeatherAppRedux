@@ -11,7 +11,6 @@ function Home() {
   const { currentWeatherData, error, isPending } = useAppSelector(
     weatherSelectors.weatherState,
   )
-  // console.log(error)
 
   return (
     <HomeContainer>
