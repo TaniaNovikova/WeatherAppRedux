@@ -10,6 +10,7 @@ const appWeatherInitialState: WeatherAppSliceState = {
   weather: [],
   error: undefined,
   isPending: false,
+  hasModalOpen: false,
 }
 
 export const weatherAppSlice = createAppSlice({
@@ -45,9 +46,10 @@ export const weatherAppSlice = createAppSlice({
           const temperature = action.payload.data.main.temp
           const iconCode = action.payload.data.weather[0].icon
           const city = action.payload.data.name
-          
+
           state.error = undefined
           state.isPending = false
+          state.hasModalOpen = false
           state.currentWeatherData = {
             id: id,
             temperature: temperature,
@@ -63,12 +65,13 @@ export const weatherAppSlice = createAppSlice({
           }
           state.currentWeatherData = undefined
           state.isPending = false
+          state.hasModalOpen = false
         },
       },
     ),
     saveWeatherCard: create.reducer(
       (state: WeatherAppSliceState, action: PayloadAction<WeatherObject>) => {
-        state.weather = [...state.weather, action.payload]
+        state.weather = [action.payload, ...state.weather]
         state.currentWeatherData = undefined
       },
     ),
@@ -80,7 +83,17 @@ export const weatherAppSlice = createAppSlice({
         })
       },
     ),
-    deleteAllCards: create.reducer(() => appWeatherInitialState),
+    deleteAllCards: create.reducer((state: WeatherAppSliceState) => {
+      state.weather = []
+    }),
+
+    onModalOpen: create.reducer((state: WeatherAppSliceState) => {
+      state.hasModalOpen = true
+    }),
+
+    onModalClose: create.reducer((state: WeatherAppSliceState) => {
+      state.hasModalOpen = false
+    }),
 
     removeErrorBlock: create.reducer(
       (state: WeatherAppSliceState) => (state.error = undefined),

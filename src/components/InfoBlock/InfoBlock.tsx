@@ -15,9 +15,13 @@ import { APPS_COLORS } from "enums"
 import { useAppDispatch } from "store/hooks"
 import { weatherActions } from "store/redux/weatherApp/weatherAppSlice"
 import { WeatherDataProps } from "./types"
+import { useState } from "react"
+import ModalDelete from "components/ModalDelete/ModalDelete"
 
 
 function InfoBlock(weatherData: WeatherDataProps) {
+
+  // *************************
     const dispatch = useAppDispatch()
 
   const temperature: number = Math.round(
@@ -69,6 +73,7 @@ function InfoBlock(weatherData: WeatherDataProps) {
         </ButtonWrapper>
       </ButtonsContainer>
     </InfoBlockContainer>
+   
   )
 }
 

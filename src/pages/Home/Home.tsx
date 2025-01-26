@@ -5,12 +5,14 @@ import { HomeContainer, SearchWrapper } from "./styles"
 import { useAppSelector } from "store/hooks"
 import { weatherSelectors } from "store/redux/weatherApp/weatherAppSlice"
 import WeatherLoader from "components/WeatherLoader/WeatherLoader"
+import ModalDelete from "components/ModalDelete/ModalDelete"
+import { useEffect, useState } from "react"
 
 function Home() {
-  
-  const { currentWeatherData, error, isPending } = useAppSelector(
+  const { currentWeatherData, error, isPending, hasModalOpen } = useAppSelector(
     weatherSelectors.weatherState,
   )
+
 
   return (
     <HomeContainer>
@@ -22,6 +24,7 @@ function Home() {
         <InfoBlock weatherData={currentWeatherData} hasSaveButton={true} />
       )}
       {error && <ErrorBlock error={error} />}
+      
     </HomeContainer>
   )
 }

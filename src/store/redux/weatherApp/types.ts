@@ -3,6 +3,7 @@ export interface WeatherAppSliceState {
   weather: WeatherObject[]
   error: ErrorObject | undefined
   isPending: boolean
+  hasModalOpen: boolean
 }
 
 
